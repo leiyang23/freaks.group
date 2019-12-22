@@ -103,7 +103,7 @@
                         that.get_statistic();
                         that.$message.success("全部上传完毕！")
                     }
-                    that.pre_images[index].name = "http://qiniu2.freaks.group/" + res.key;
+                    that.pre_images[index].name = encodeURI("http://qiniu1.freaks.group/" + res.key);
                 }
             },
 
