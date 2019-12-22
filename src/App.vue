@@ -29,7 +29,7 @@
 
                   <el-menu-item index="3" route="/apps/imgur">图床</el-menu-item>
                   <el-menu-item index="4" route="/apps/musicVisualization">频谱</el-menu-item>
-                  <el-menu-item index="4" route="/apps/ocr">图像转文字</el-menu-item>
+                  <el-menu-item index="5" route="/apps/ocr">图像转文字</el-menu-item>
                 </el-menu-item-group>
               </el-menu>
             </el-col>
