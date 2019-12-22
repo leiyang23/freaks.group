@@ -9,6 +9,11 @@ const http = axios.create({
 //  请求拦截器：将post参数编码
 http.interceptors.request.use((req) => {
     if (req.method === 'post') {
+        // 使用 axios 上传文件
+        if (req.headers['Content-Type'].toLowerCase() === "multipart/form-data;charset=utf8"){
+            return req
+        }
+
         req.data = qs.stringify(req.data);
     }
     return req;

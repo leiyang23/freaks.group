@@ -40,6 +40,10 @@ const routes = [
                 path: "musicVisualization/",
                 component: () => import('../views/apps/musicVisualization/index.vue')
             },
+            {
+                path: "ocr/",
+                component: () => import('../views/apps/ocr/index.vue')
+            },
         ]
     },
 ];
