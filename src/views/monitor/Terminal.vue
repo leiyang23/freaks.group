@@ -68,10 +68,10 @@
                 conn_status: false,
                 dialogVisible: true,
                 conn_info: {
-                    "host": "47.111.175.222",
+                    "host": "",
                     "port": 22,
-                    "username": "root",
-                    "password": "1005931665Ecs"
+                    "username": "",
+                    "password": ""
                 },
 
             }
