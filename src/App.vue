@@ -5,10 +5,10 @@
 
         <el-row class="aside">
           <el-row class="nav">
-            <el-row class="logo">
-              <i class="fa fa-user"></i>
-              <span style="margin-left: 6px" @click="goto_blog">博客</span>
-            </el-row>
+<!--            <el-row class="logo">-->
+<!--              <i class="fa fa-user"></i>-->
+<!--              <span style="margin-left: 6px" @click="goto_blog">博客</span>-->
+<!--            </el-row>-->
             <el-col :span="24">
               <el-menu class="menu-aside"
                        :router="true"
@@ -21,7 +21,7 @@
                   <template slot="title"><i class="fa fa-television"></i> <span
                           style="font-size: 14px;margin-left: 2px">监控</span></template>
                   <el-menu-item index="1" route="/monitor/hosts">主机</el-menu-item>
-                  <el-menu-item index="2" route="/monitor/services">服务</el-menu-item>
+                  <el-menu-item index="2" route="/monitor/terminal">shell</el-menu-item>
                 </el-menu-item-group>
                 <el-menu-item-group>
                   <template slot="title"><i class="fa fa-server"></i> <span
