@@ -1,14 +1,12 @@
 <template>
   <div id="app">
     <el-container>
-      <el-aside width="200px" :style="{height: pageHeight + 'px'}">
+      <el-aside width="200px" :style="{height: pageHeight + 'px'}">        
 
         <el-row class="aside">
+          <User/>
+
           <el-row class="nav">
-<!--            <el-row class="logo">-->
-<!--              <i class="fa fa-user"></i>-->
-<!--              <span style="margin-left: 6px" @click="goto_blog">博客</span>-->
-<!--            </el-row>-->
             <el-col :span="24">
               <el-menu class="menu-aside"
                        :router="true"
@@ -47,17 +45,18 @@
           <router-view/>
         </transition>
       </el-main>
-    </el-container>
+    </el-container>    
   </div>
 </template>
 <script>
     import MusicBox from "./components/MusicBox";
+    import User from "./components/User";
 
     export default {
-        components: {MusicBox},
+        components: {MusicBox,User},
         data() {
             return {
-                pageHeight: 0
+                pageHeight: 0,
             }
         },
         mounted() {
@@ -65,13 +64,9 @@
             let that = this;
             window.addEventListener('resize', function () {
                 that.pageHeight = document.body.clientHeight;
-            })
+            });
+
         },
-        methods: {
-            goto_blog() {
-                window.open("https://leiyang23.github.io/blog/")
-            }
-        }
     }
 </script>
 
@@ -97,21 +92,9 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      
       .nav{
         flex-grow: 2;
-        .logo {
-          width: 100%;
-          height: 50px;
-          font-size: 14px;
-          color: #aaa;
-          line-height: 50px;
-          padding-left: 20px;
-
-          &:hover {
-            color: #42b983;
-            cursor: pointer;
-          }
-        }
 
         .menu-aside {
           border-right: none;

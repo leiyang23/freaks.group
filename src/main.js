@@ -12,8 +12,10 @@ Vue.use(ElementUI);
 Vue.config.productionTip = false;
 Vue.prototype.$http = http.http;
 
-new Vue({
+let vue = new Vue({
     router,
     store,
     render: h => h(App)
 }).$mount('#app');
+
+export default vue
