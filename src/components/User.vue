@@ -16,12 +16,14 @@
                   <el-button size="small" @click="registerFormVisiable=true">注册</el-button>            
                 </el-row>
               </el-row>
-              <el-avatar slot="reference" :size="50" shape="square" icon="el-icon-user" style="cursor: pointer;"></el-avatar>
+              <el-avatar slot="reference" :size="60"   style="cursor: pointer;color:#fefefe;background-color:#ff677d">未登录</el-avatar>   
             </el-popover>
           </el-row>
 
-          <el-row class="user-login" v-else>
-            <el-avatar :size="100" shape="square" :src="user.avatar" style="cursor: pointer;"></el-avatar>
+          <el-row class="user-login" v-else @click.native="goto">
+            <!-- <router-link to="/user"> -->
+              <el-avatar :size="100" shape="square" :src="user.avatar" style="cursor: pointer;"></el-avatar>
+            <!-- </router-link> -->
             <el-row style="font-size:12px;color:#f1f1f1;height:30px;line-height:30px">
               {{user.username}}
             </el-row>
@@ -43,29 +45,29 @@
         </el-dialog>
 
         <el-dialog title="注册" :visible.sync="registerFormVisiable" width="400px">
-        <el-form :model="registerInfo">
-          <el-form-item>
-            <el-input v-model="registerInfo.email" placeholder="邮箱"/>
-          </el-form-item>
-          <el-form-item>
-            <el-row type="flex" >
-              <el-input v-model="registerInfo.verifyCode" placeholder="验证码"/>
-              <el-button :disabled="!registerInfo.email" @click="send_verify_code">获取验证码</el-button>
-            </el-row>          
-          </el-form-item>
+          <el-form :model="registerInfo">
+            <el-form-item>
+              <el-input v-model="registerInfo.email" placeholder="邮箱"/>
+            </el-form-item>
+            <el-form-item>
+              <el-row type="flex" >
+                <el-input v-model="registerInfo.verifyCode" placeholder="验证码"/>
+                <el-button :disabled="!registerInfo.email" @click="send_verify_code">获取验证码</el-button>
+              </el-row>          
+            </el-form-item>
 
-          <el-form-item>
-            <el-input v-model="registerInfo.password" placeholder="设置密码"/>
-          </el-form-item>
-          <el-form-item>
-            <el-input v-model="registerInfo.rePassword" placeholder="重复密码"/>
-          </el-form-item>
-        </el-form>
-        <div slot="footer" class="dialog-footer">
-          <el-button @click="registerFormVisiable = false">取 消</el-button>
-          <el-button type="primary" @click="register">注 册</el-button>
-        </div>
-      </el-dialog>
+            <el-form-item>
+              <el-input v-model="registerInfo.password" placeholder="设置密码"/>
+            </el-form-item>
+            <el-form-item>
+              <el-input v-model="registerInfo.rePassword" placeholder="重复密码"/>
+            </el-form-item>
+          </el-form>
+          <div slot="footer" class="dialog-footer">
+            <el-button @click="registerFormVisiable = false">取 消</el-button>
+            <el-button type="primary" @click="register">注 册</el-button>
+          </div>
+        </el-dialog>
           
     </div>
 </template>
@@ -98,6 +100,10 @@ export default {
             }
         },
     methods: {
+            goto(){
+              this.$router.push("/user");
+              this.$emit("goto");
+            },
             login(){
               let that = this;
               // todo: 检查输入信息格式

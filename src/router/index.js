@@ -29,6 +29,34 @@ const routes = [
         ]
     },
     {
+        path:"/user",
+        component:() => import('../views/user/index.vue'),
+        children:[
+            {
+                path: "",
+                // component:() => import('../views/user/SelfInfo.vue'),
+                components:{
+                    user: () => import('../views/user/SelfInfo.vue')
+                }
+                
+            },
+            {
+                path: "selfInfo",
+                // component:() => import('../views/user/SelfInfo.vue'),
+                components:{
+                    user: () => import('../views/user/SelfInfo.vue')
+                }
+                
+            },
+            {
+                path: "weatherTip",
+                components:{
+                    user: () => import('../views/user/WeatherTip.vue')
+                }
+            },
+        ]
+    },
+    {
         path: "/apps",
         component: () => import('../views/apps/index.vue'),
         children: [

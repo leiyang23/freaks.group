@@ -4,11 +4,12 @@
       <el-aside width="200px" :style="{height: pageHeight + 'px'}">        
 
         <el-row class="aside">
-          <User/>
+          <User @goto="change"/>
 
           <el-row class="nav">
             <el-col :span="24">
               <el-menu class="menu-aside"
+                        ref="el_menu"
                        :router="true"
                        default-active="1"
                        background-color="#3c444d"
@@ -67,6 +68,11 @@
             });
 
         },
+        methods:{
+          change(){
+            this.$refs.el_menu.activeIndex = "0"
+          }
+        }
     }
 </script>
 

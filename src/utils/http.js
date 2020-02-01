@@ -40,7 +40,7 @@ http.interceptors.response.use(
             store.commit("logout");
             localStorage.removeItem("user");
             localStorage.removeItem("token");
-            vue.$message.info("token 已过期，请重新登录")
+            vue.$message.info("请登录")
         }
         return response
     },
