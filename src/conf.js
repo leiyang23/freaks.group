@@ -1,4 +1,4 @@
-const DEBUG = true;
+const DEBUG = false;
 let BASE_URL = '';
 let WS_BASE_URL = '';
 if (DEBUG) {
