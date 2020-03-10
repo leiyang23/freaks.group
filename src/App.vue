@@ -37,6 +37,9 @@
           <el-row class="music">
             <MusicBox/>
           </el-row>
+          <el-row class="beian">
+            <a href="http://www.beian.miit.gov.cn" target="_blank">豫ICP备18007474号</a>
+          </el-row>
 
         </el-row>
 
@@ -117,5 +120,32 @@
   }
   .main{
     overflow: auto;
+  }
+  .beian{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
+
+    a {
+      text-decoration: none;
+      color: #a3a3a3;
+    }
+    /*正常的未被访问过的链接*/
+    a:link {
+      text-decoration: none;
+    }
+    /*已经访问过的链接*/
+    a:visited {
+      text-decoration: none;
+    }
+    /*鼠标划过(停留)的链接*/
+    a:hover {
+      text-decoration: none;
+    }
+    /* 正在点击的链接*/
+    a:active {
+      text-decoration: none;
+    }
   }
 </style>
