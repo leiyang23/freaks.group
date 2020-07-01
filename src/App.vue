@@ -18,9 +18,9 @@
               >
                 <el-menu-item-group>
                   <template slot="title"><i class="fa fa-television"></i> <span
-                          style="font-size: 14px;margin-left: 2px">监控</span></template>
-                  <el-menu-item index="1" route="/monitor/hosts">主机</el-menu-item>
-                  <el-menu-item index="2" route="/monitor/terminal">shell</el-menu-item>
+                          style="font-size: 14px;margin-left: 2px">运维</span></template>
+                  <el-menu-item index="1" route="/monitor/hosts">主机性能</el-menu-item>
+                  <el-menu-item index="2" route="/monitor/terminal">远程shell</el-menu-item>
                 </el-menu-item-group>
                 <el-menu-item-group>
                   <template slot="title"><i class="fa fa-server"></i> <span

@@ -135,6 +135,7 @@ export default {
                   localStorage.setItem("user",JSON.stringify(res.data.data));
                   that.user = res.data.data;
                   that.$store.commit("login");
+                  that.$store.commit("set_msg_num",res.data.data.msg_num)
                 }else{
                   that.$message.warning("获取用户信息失败！")
                 }

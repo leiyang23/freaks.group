@@ -54,6 +54,12 @@ const routes = [
                     user: () => import('../views/user/WeatherTip.vue')
                 }
             },
+            {
+                path: "message",
+                components:{
+                    user: () => import('../views/user/Message.vue')
+                }
+            },
         ]
     },
     {
