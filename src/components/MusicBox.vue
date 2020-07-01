@@ -37,7 +37,7 @@
             get_url(){
                 let that = this;
                 that.$http({
-                    baseURL: "http://api.freaks.group",
+                    baseURL: "http://freaks.group",
                     url:"/assert/api/netease/random" + that.playlist_id == undefined?"?playlist_id=" + that.playlist_id : "",
                 }).then(res => {
                     window.console.log(res.data);
