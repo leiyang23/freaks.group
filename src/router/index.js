@@ -78,6 +78,14 @@ const routes = [
                 path: "ocr/",
                 component: () => import('../views/apps/ocr/index.vue')
             },
+            {
+                path: "about/me",
+                component: () => import('../views/apps/about/me.vue')
+            },
+            {
+                path: "about/site",
+                component: () => import('../views/apps/about/site.vue')
+            },
         ]
     },
 ];

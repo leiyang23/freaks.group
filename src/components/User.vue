@@ -35,7 +35,7 @@
                 <el-input v-model="loginInfo.account" placeholder="邮箱/用户名"/>
                 </el-form-item>
                 <el-form-item>
-                <el-input v-model="loginInfo.password" placeholder="密码"/>
+                <el-input v-model="loginInfo.password" type="password" placeholder="密码"/>
                 </el-form-item>
             </el-form>
             <div slot="footer" class="dialog-footer">
@@ -57,10 +57,10 @@
             </el-form-item>
 
             <el-form-item>
-              <el-input v-model="registerInfo.password" placeholder="设置密码"/>
+              <el-input v-model="registerInfo.password" type="password" placeholder="设置密码"/>
             </el-form-item>
             <el-form-item>
-              <el-input v-model="registerInfo.rePassword" placeholder="重复密码"/>
+              <el-input v-model="registerInfo.rePassword" type="password" placeholder="重复密码"/>
             </el-form-item>
           </el-form>
           <div slot="footer" class="dialog-footer">
