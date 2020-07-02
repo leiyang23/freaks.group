@@ -36,7 +36,11 @@
                     if (that.sound.ended) {
                         that.next()
                     }
-                }, 1000)
+                }, 1000);
+
+                this.sound.addEventListener('error', () => {
+                    that.next()
+                });
             },
             next(){
                 let that = this;
@@ -53,9 +57,10 @@
                     window.console.log(res.data);
                     if(res.data.data == ""){
                         if(that.retry>5){
+                            that.is_play = false;
                             return
                         }
-                        that.get_url();
+                        that.next();
                         that.retry += 1;
                     }else {
                         that.sound.src = res.data;
@@ -74,7 +79,7 @@
                 if(this.currentTime == 0){
                     this.next();
                 }else{
-                    this.sound.fastSeek(this.currentTime);
+                    this.sound.currentTime = this.currentTime;
                     this.sound.play();
                 }
                 this.is_play = true
