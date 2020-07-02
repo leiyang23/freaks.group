@@ -9,7 +9,7 @@
         <div class="title">基本信息</div>
         <div class="block system">
           <el-tag>操作系统：{{base.uname.system}}</el-tag>
-          <el-tag>系统版本：{{base.uname.version}}</el-tag>
+          <el-tag>系统版本：{{base.uname.release}}</el-tag>
           <el-tag>网络节点：{{base.uname.node}}</el-tag>
           <el-tag>处理器架构：{{base.uname.machine}}</el-tag>
           <el-tag>CPU 型号：{{base.cpu.model}}</el-tag>
